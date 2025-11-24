@@ -1,0 +1,122 @@
+.shade{
+    background-color: rgba(0, 0, 0, .75);
+    width: 100vw;
+    height: 100vh;
+    margin: -8px;
+    margin-top: -26.5px;
+}
+.logo img{
+    width: 150px;
+    margin-top: 25px;
+}
+header{
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 140px;
+    margin-right: 140px;
+    font-size: 18px;
+}
+.english{
+    font-size: 16px;
+    color: white;
+    border-style: solid;
+    border-width: .5px;
+    padding: 6px;
+    border-radius: 5px;
+    margin-right: 25px;
+}
+.english:hover{
+    transition: 0.5s;
+    color:black;
+    background-color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.english span{
+    padding: 5px;
+}
+header div+div{
+    margin-top: 30px;
+}
+.signIn{
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    background-color: #db0000;
+    padding: 9px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 5px;
+    margin-right: 25px;
+}
+.signIn:hover{
+    transition: 0.5s;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: white;
+    color: #db0000;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+}
+.mainText{
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    margin-left: 30%;
+    margin-right: 30%;
+    justify-content: center;
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+    align-items: center;
+}
+.mainText>span{
+    font-size: 60px;
+    font-weight:1000px;
+}
+.mainText>div{
+    padding-top: 15px;
+    font-size: 20px;
+    font-weight: 700;
+}
+.mainText>div+div{
+    font-size: 16px;
+    font-weight: 500;
+    padding-top: 40px;
+}
+.logIn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.email{
+    background-color: rgba(23, 23, 23, 0.681);
+    padding: 18px;
+    padding-right: 200px;
+    padding-top: 24px;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1.5px;
+    border-color: rgba(255, 255, 255, 0.25);
+    color: rgba(255, 255, 255, 0.75);
+    margin-right: 10px;
+}
+.getStarted{
+    background-color: #db0000;
+    font-size: 25px;
+    font-weight: 900;
+    padding: 20px;
+    border-radius: 5px;
+}
+.getStarted:hover{
+    transition: 0.5s;
+    /* padding-top: 25px;
+    padding-bottom:25px; */
+    background-color: white;
+    color: #db0000;
+    cursor: pointer;
+}
