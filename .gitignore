@@ -1,0 +1,21 @@
+.DS_Store
+node_modules/
+npm-debug.log*
+package-lock.json
+.env
+.vscode/
+dist/
+build/
+# logs
+logs/
+*.log
+
+# macOS
+.DS_Store
+
+# Ignore local editors
+*.sublime-workspace
+.idea/
+
+# keep public documents if needed
+/public/documents/
