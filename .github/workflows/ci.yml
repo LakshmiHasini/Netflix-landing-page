@@ -1,0 +1,45 @@
+name: CI — HTML & CSS lint
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  html-lint:
+    name: HTML validation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run HTML Validator
+        uses: alex-page/html-validator-action@v2
+        with:
+          files: "**/*.html"
+
+  css-lint:
+    name: CSS lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install csslint
+        run: npm install -g csslint
+
+      - name: Run csslint on project CSS files
+        run: |
+          set -e
+          files=$(git ls-files 'src/**/*.css' 'public/**/*.css' || true)
+          if [ -z "$files" ]; then
+            echo "No CSS files to lint"
+            exit 0
+          fi
+          csslint $files
